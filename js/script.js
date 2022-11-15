@@ -21,31 +21,34 @@ var app = new Vue({
        todos:[
         {
           text:'fare la spesa',
-          //done: false
+          done: false
         },
         {
           text:'fare la i compiti',
-         // done: false
+          done: false
         },
         {
           text:'fare la spesa',
-         // done: false
+          done: false
         },
         {
           text:'fare la le pulizie',
-          //done: false
+          done: false
         },
         {
           text:'fare il bucato',
-          //done: false
+          done: false
         }
        ],
        newToDo:'',
     },
     methods:{
       addToDo(){
-        this.todos.text.push(this.newToDo)
-        //this.todos.done.add(false)
+        if(this.newToDo.trim()){
+          this.todos.push({text:this.newToDo,
+          done:false})
+          this.newToDo = ''
+        }
       },
       deleteToDo(index){
         this.todos.splice(index, 1);
