@@ -3,3 +3,52 @@
     padding: 0;
     box-sizing: border-box;
 }
+h1{
+    text-align: center;
+    padding: 2rem;
+    font-size: 50px;
+}
+nav{
+    text-align: center;
+}
+.new-todo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.new-todo>input{
+    padding: 1rem;
+    width: 400px;
+    text-align: center;
+}
+.new-todo>button{
+    font-size: 30px;
+    height: 52px;
+    aspect-ratio: 1;
+}
+.new-todo>button:hover{
+    color: rgb(0, 70, 128);
+}
+.todos-container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+li{
+    margin: 3rem;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+.complete{
+    margin-top: 4rem;
+}
+li>i{
+    padding: 0.5rem;
+}
+li>i:hover{
+    color: red;
+    cursor: pointer;
+}

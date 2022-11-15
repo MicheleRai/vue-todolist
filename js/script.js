@@ -18,6 +18,37 @@ Bonus:
 var app = new Vue({
     el: '#root',
     data: {
-
+       todos:[
+        {
+          text:'fare la spesa',
+          //done: false
+        },
+        {
+          text:'fare la i compiti',
+         // done: false
+        },
+        {
+          text:'fare la spesa',
+         // done: false
+        },
+        {
+          text:'fare la le pulizie',
+          //done: false
+        },
+        {
+          text:'fare il bucato',
+          //done: false
+        }
+       ],
+       newToDo:'',
     },
-  });
+    methods:{
+      addToDo(){
+        this.todos.text.push(this.newToDo)
+        //this.todos.done.add(false)
+      },
+      deleteToDo(index){
+        this.todos.splice(index, 1);
+      },
+     },
+});
