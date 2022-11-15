@@ -30,9 +30,9 @@
         <div class="todos-container">
             <h2 class="complete" v-if="todos.length == 0 ">COMPLIMENTI! HAI COMPLETATO TUTTI I COMPITI PER OGGI</h2>
             <ul>
-                <li v-for="todo in todos" :kay="todo" class="todo">
+                <li v-for="(todo,index) in todos" :kay="todo" class="todo">
                     {{todo.text}}
-                    <i @click="deleteToDo()" class="fa-solid fa-xmark"></i>
+                    <i @click="deleteToDo(index)" class="fa-solid fa-xmark"></i>
                 </li>
             </ul>
         </div>
