@@ -10,7 +10,7 @@
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- vue -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
     <!-- script -->
     <script src="js/script.js" defer></script>
@@ -30,8 +30,8 @@
         <div class="todos-container">
             <h2 class="complete" v-if="todos.length == 0 ">COMPLIMENTI! HAI COMPLETATO TUTTI I COMPITI PER OGGI</h2>
             <ul>
-                <li v-for="(todo,index) in todos" :kay="todo" class="todo">
-                    {{todo.text}}
+                <li v-for="(todo, index) in todos" :kay="todo" @click="isDone(index)">
+                    <div class="todo" :class="{done: todo.done}">{{todo.text}}</div>
                     <i @click="deleteToDo(index)" class="fa-solid fa-xmark"></i>
                 </li>
             </ul>

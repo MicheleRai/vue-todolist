@@ -42,6 +42,10 @@ li{
     align-items: center;
     border-bottom: 2px solid black;
 }
+li:hover{
+    background-color: blueviolet;
+    cursor: pointer;
+}
 .complete{
     margin-top: 4rem;
 }
@@ -51,4 +55,7 @@ li>i{
 li>i:hover{
     color: red;
     cursor: pointer;
+}
+.todo.done{
+    text-decoration: line-through;
 }

@@ -46,12 +46,16 @@ var app = new Vue({
       addToDo(){
         if(this.newToDo.trim()){
           this.todos.push({text:this.newToDo,
-          done:false})
-          this.newToDo = ''
+                           done:false
+                          });
+          this.newToDo = '';
         }
       },
       deleteToDo(index){
         this.todos.splice(index, 1);
+      },
+      isDone(index){
+        this.todos[index].done = !this.todos[index].done;
       },
      },
 });
